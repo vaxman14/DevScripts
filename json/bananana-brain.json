@@ -1,0 +1,44 @@
+{
+  "name": "bananana brain",
+  "slug": "bananana-brain",
+  "categories": [
+    9
+  ],
+  "date_created": "2026-11-07",
+  "type": "ct",
+  "updateable": true,
+  "privileged": false,
+  "interface_port": 18771,
+  "documentation": "https://bananana.dev/help/docker",
+  "website": "https://bananana.dev",
+  "repository": null,
+  "logo": "https://raw.githubusercontent.com/vaxman14/bananana-unraid/main/icon.png",
+  "description": "The bananana brain is your own control room for servers, Macs and PCs: live readings, alerts, automations, files, terminals and history on your own hardware, reached from anywhere at your-name.bananana.dev and in the bananana.dev iPhone and Android apps through an outbound end-to-end encrypted relay, with no open ports or VPN.",
+  "install_methods": [
+    {
+      "type": "default",
+      "script": "ct/bananana-brain.sh",
+      "resources": {
+        "cpu": 1,
+        "ram": 1024,
+        "hdd": 6,
+        "os": "Debian",
+        "version": "13"
+      }
+    }
+  ],
+  "default_credentials": {
+    "username": null,
+    "password": null
+  },
+  "notes": [
+    {
+      "text": "Create a free account at https://bananana.dev/start, put the setup token in /opt/bananana-brain/.env and run: cd /opt/bananana-brain && docker compose up -d --force-recreate",
+      "type": "info"
+    },
+    {
+      "text": "The LAN dashboard on port 18771 uses a self-signed certificate. Data lives in /opt/bananana-brain/data; keep it backed up.",
+      "type": "info"
+    }
+  ]
+}
